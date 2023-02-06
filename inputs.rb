@@ -1,9 +1,9 @@
-@context = 'https://staging2.sis-online.org'#'https://testservice2.sis-online.org/'
+@context = 'https://staging2.sis-online.org'
 
-@username = 'TherapRITest'#'NDUser'#'TherapRITest'
-@password = 'Therap321#' #Testpass854(nd-current), Therap321#(ri-current)
+@username = 'RITest'
+@password = '******#'
 
-@interview_login_name =  "TherapRITest (Sazzad Rafique)"#"TherapRITest (Sazzad Rafique)" #"NDUser (NDUser )"
+@interview_login_name =  "NDUser (NDUser )"
 
 
 @first_name = 'Sandra'
