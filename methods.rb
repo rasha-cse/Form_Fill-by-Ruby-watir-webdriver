@@ -12,9 +12,9 @@ def login_using(username, password)
   @browser.button(value: 'Login').click
 end
 
-def fillup_sis_form(firstname, lastname, tracking_number, medicaid_id, lock)
+def fillup_form(firstname, lastname, tracking_number, medicaid_id, lock)
 
-  @browser.button(value: 'Create New SIS-A Assessment').click
+  @browser.button(value: 'Create New -A Assessment').click
   interview_Profile_form firstname, lastname, tracking_number, medicaid_id
 
   section1("A")
@@ -35,35 +35,35 @@ def fillup_sis_form(firstname, lastname, tracking_number, medicaid_id, lock)
 end
 
 def interview_Profile_form(firstname, lastname, tracking_number, medicaid_id)
-  @browser.text_field(name: 'sis_cl_first_nm').set firstname
-  @browser.text_field(name: 'sis_cl_last_nm').set lastname
-  @browser.text_field(name: 'sis_completed_dt').set '05/11/2019'   #Interview Date
-  @browser.text_field(name: 'sis_track_num').set tracking_number
-  @browser.text_field(name: 'sis_cl_medicaidNum').set medicaid_id
-  @browser.text_field(name: 'sis_cl_dob_dt').set '05/11/2000'
-  @browser.text_field(name: 'sis_startTime').set '03:00PM'
-  @browser.text_field(name: 'sis_endTime').set '04:00PM'
+  @browser.text_field(name: '_cl_first_nm').set firstname
+  @browser.text_field(name: '_cl_last_nm').set lastname
+  @browser.text_field(name: '_completed_dt').set '05/11/2019'   #Interview Date
+  @browser.text_field(name: '_track_num').set tracking_number
+  @browser.text_field(name: '_cl_medicaidNum').set medicaid_id
+  @browser.text_field(name: '_cl_dob_dt').set '05/11/2000'
+  @browser.text_field(name: '_startTime').set '03:00PM'
+  @browser.text_field(name: '_endTime').set '04:00PM'
 
-  @browser.label(text: 'Male', for: 'sis_cl_sex_cd_m').click
+  @browser.label(text: 'Male', for: '_cl_sex_cd_m').click
 
-  @browser.text_field(name: 'sis_cl_addr_line1').set 'Test Address'
-#  @browser.select_list(id: 'sis_cl_cou').select "Golden Valley" if @browser.select_list(id: 'sis_cl_cou').exists?
-  @browser.text_field(id: 'sis_cl_city').set "Test City"
-#  @browser.select_list(id: 'sis_cl_st').select "AZ" if @browser.select_list(id: 'sis_cl_st').exists?
-  @browser.text_field(id: 'sis_cl_zip').set 'Test Zip'
-  @browser.select_list(id: 'sis_int_id_item').select "NDUser (NDUser )" if @browser.select_list(id: 'sis_int_id_item').exists?
-  @browser.text_field(id: 'sis_int_full_nm').set 'Test Interviwer'
-  @browser.text_field(id: 'sis_int_position_cd').set 'Test Position'
-  @browser.text_field(name: 'sis_int_agency_nm').set 'Test'
-  @browser.text_field(name: 'sis_int_phone_num').set "(111)111-1111"
-  @browser.text_field(name: 'sis_int_addr_line1').set 'Test Address'
-  @browser.text_field(name: 'sis_int_email').set 'Test Email'
-  @browser.text_field(name: 'sis_int_city').set 'Test City'
-  @browser.text_field(name: 'sis_int_st').set 'Test State'
-  @browser.text_field(name: 'sis_int_zip').set "Test Zip"
+  @browser.text_field(name: '_cl_addr_line1').set 'Test Address'
+#  @browser.select_list(id: '_cl_cou').select "Golden Valley" if @browser.select_list(id: '_cl_cou').exists?
+  @browser.text_field(id: '_cl_city').set "Test City"
+#  @browser.select_list(id: '_cl_st').select "AZ" if @browser.select_list(id: '_cl_st').exists?
+  @browser.text_field(id: '_cl_zip').set 'Test Zip'
+  @browser.select_list(id: '_int_id_item').select "NDUser (NDUser )" if @browser.select_list(id: '_int_id_item').exists?
+  @browser.text_field(id: '_int_full_nm').set 'Test Interviwer'
+  @browser.text_field(id: '_int_position_cd').set 'Test Position'
+  @browser.text_field(name: '_int_agency_nm').set 'Test'
+  @browser.text_field(name: '_int_phone_num').set "(111)111-1111"
+  @browser.text_field(name: '_int_addr_line1').set 'Test Address'
+  @browser.text_field(name: '_int_email').set 'Test Email'
+  @browser.text_field(name: '_int_city').set 'Test City'
+  @browser.text_field(name: '_int_st').set 'Test State'
+  @browser.text_field(name: '_int_zip').set "Test Zip"
 
-  @browser.text_field(name: 'sis_entry_firstn').set 'Nawshad'
-  @browser.text_field(name: 'sis_entry_lastn').set 'Rasha'
+  @browser.text_field(name: '_entry_firstn').set 'Nawshad'
+  @browser.text_field(name: '_entry_lastn').set 'Rasha'
 
   @browser.text_field(id: 'txtS1aPageNotes').set 'Test'
   #@browser.span(text: 'Save Data and Continue to Profile screen 2').click
