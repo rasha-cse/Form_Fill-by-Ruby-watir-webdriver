@@ -1,9 +1,9 @@
-@context = 'https://staging2.sis-online.org'
+@context = 'https://staging2-online.org'
 
-@username = 'RITest'
+@username = 'Test'
 @password = '******#'
 
-@interview_login_name =  "NDUser (NDUser )"
+@interview_login_name =  "User (User)"
 
 
 @first_name = 'Sandra'
@@ -11,13 +11,13 @@
 @tracking_number = '5877'
 @dob = '08/06/1981'
 @lock_or_unlock = 'unLock'
-@RI_Pending_Approval = 'yes' #yes lenghtier
+@Pending_Approval = 'yes' #yes lenghtier
 @count = 2
 
-@state = 'RI'#'ND'#'RI'
+@state = 'RI'
 @middlename = 'C'
 @medicaid_id = @tracking_number + @state
-@screenshot_save_path = 'screenshots/' + "SISOnline_Screenshot" #+ '.png' #Time.now.to_i.to_s
+@screenshot_save_path = 'screenshots/' + "Online_Screenshot" #+ '.png' #Time.now.to_i.to_s
 
 
 ########### Section1 Range -> 0,1,2
