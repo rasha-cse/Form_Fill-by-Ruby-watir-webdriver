@@ -23,8 +23,6 @@ profile.proxy = Selenium::WebDriver::Proxy.new :http => '8.44.213.199:3128', :ss
 sleep 10                         #manual fix
 login_using @username, @password
 
-#@browser.goto 'https://staging2.sis-online.org/Search'
-
 #fillup_sis_form 'firstname', 'lastname', 'tracking_number', 'medicaid ID', 'lock'
 for loopcount in 1..@count
   p loopcount
@@ -32,5 +30,5 @@ for loopcount in 1..@count
   sleep 4
 end
 
-puts "SIS Assessment created for Individual #{@first_name} #{@last_name}."
+puts "Assessment created for Individual #{@first_name} #{@last_name}."
 puts "It took " + ((Time.now - start)/60).to_s + " minutes"
